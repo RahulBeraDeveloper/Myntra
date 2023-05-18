@@ -144,13 +144,16 @@ function dropDown5() {
 }
 dropDown5();
 
-
+// dark mode
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 themeToggle.addEventListener('click', function() {
   body.classList.toggle('dark-mode');
 });
+
+
+
 
 
 // for popup
@@ -166,4 +169,41 @@ window.onload = function() {
       popup.style.display = "none";
     }
   };
-  
+
+
+
+//   /* weather section and geo-location*/
+
+
+
+  let y = document.getElementById('weather');
+
+    // Get geolocation and weather information upon page load
+    window.addEventListener('load', () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        y.innerText = "Geolocation Not Supported";
+      }
+    });
+
+    function showPosition(data) {
+      console.log(data);
+      let lat = data.coords.latitude;
+      let lon = data.coords.longitude;
+
+      const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+
+      // API call
+      fetch(url, { method: 'GET' })
+        // Return promise
+        .then((res) => res.json())
+        // Resolve the promise
+        .then((data) => {
+          console.log(data);
+          let cityName = data.city.name;
+          let temp = data.list[0].temp.day + " °C";
+          let weatherIcon = data.list[0].weather[0].icon;
+          y.innerHTML = `<img class="weather-icon" src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon">${temp} | ${cityName}`;
+        });
+    }

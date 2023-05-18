@@ -30,36 +30,40 @@
         </div>
         <div class="categories">
           <ul>
-            <li class="dropdown-content1 dropdown-content">
-              <a href="">Men</a>
+            <li class="dropdown-content1 dropdown-content" >
+              <a href="" class="change">Men</a>
             </li>
             <li class="dropdown-content2 dropdown-content">
-              <a href="">Women</a>
+              <a href="" class="change">Women</a>
             </li>
             <li class="dropdown-content3 dropdown-content">
-              <a href="">Kids</a>
+              <a href="" class="change">Kids</a>
             </li>
             <li class="dropdown-content4 dropdown-content">
-              <a href="">Home & Living</a>
+              <a href="" class="change">Home & Living</a>
             </li>
             <li class="dropdown-content5 dropdown-content">
-              <a href="">Beauty</a>
+              <a href=""class="change">Beauty</a>
             </li>
           </ul>
          
         </div>
-    
-        <button id="theme-toggle">
-          <span class="icon" id="sun-icon"><img src="images/sun.png"></span>
-          <span class="icon" id="moon-icon"><img src="images/moon.png"></span>
-        </button>
+    <!-- light/dark theme -->
+       <button id="theme-toggle">
+        <span class="icon" id="sun-icon" ><img src="images/sun.png"></span>
+        <span class="icon" id="moon-icon"><img src="images/moon.png"></span>
+      </button>
+   
+    <!-- light/dark theme ends -->
    
       <!-- copoun code -->
       <div id="popup-coupon">
         <span class="close-btn">&times;</span>
-        <h2>Get 20% off your first purchase!</h2>
-        <p>Enter code SAVE20 at checkout to redeem.</p>
+        <!-- <h2>Get 20% off your first purchase!</h2>
+        <p>Enter code SAVE20 at checkout to redeem.</p> -->
       </div>
+ <!-- copoun code ends -->
+
 
         <!-- Search Div -->
         <div class="search-div">
@@ -79,6 +83,7 @@
           <div>
             <a href="">
               <img
+              class="change2"
                 id="svg"
                 src="https://www.svgrepo.com/show/198180/user-profile.svg"
                 alt=""
@@ -91,6 +96,7 @@
           <div>
             <a href="">
               <img
+              class="change2"
                 id="svg"
                 src="https://www.svgrepo.com/show/14970/heart.svg"
                 alt=""
@@ -103,6 +109,7 @@
           <div>
             <a href="">
               <img
+              class="change2"
                 id="svg"
                 src="https://www.svgrepo.com/show/17522/bag.svg"
                 alt=""
@@ -180,7 +187,7 @@
 
         <div class="mySlides fade">
           <img
-            src="images/banner3.jpg"
+            src="images/banner6.jpg"
             style="width: 100%"
           />
         </div>
@@ -410,6 +417,15 @@
         /></a>
       </div>
 
+
+      <!-- /* weather section and geo-location*/ -->
+      <div class="container_weather">
+        <!-- <h1>Weather Information</h1> -->
+        <p id="weather"></p>
+      </div>
+  
+
+
       <!-- Footer -->
 
       <footer class="footer" id="site-footer">
@@ -488,7 +504,8 @@
           </div>
         </div>
       </footer>
-    </main>
+      
+    
   </body>
 </html>
 <script src="script.js"></script>

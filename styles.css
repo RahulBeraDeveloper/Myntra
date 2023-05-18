@@ -1,15 +1,40 @@
 /* Light mode styles */
 body {
   background-color: #fff;
-  color: #0a0a0a;
+  color: #050000;
   z-index: 999;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #0a0a0a;;
-  color: #841010;
+  background-color:  #050000;;
+  color: #fff;
   z-index: 999;
+}
+body.dark-mode #site-header {
+  background-color: #050000;
+color:#fff;
+}
+body.dark-mode.dropdown-content1 {
+  background-color: #050000;
+  color: #fff;
+}
+body.dark-mode footer {
+  background-color: #050000;
+  color:#fff;
+}
+body.dark-mode .categories{
+  background-color:  #050000;
+ color: #fff;
+}
+body.dark-mode .change{
+  background-color:  #050000;
+  color: #fff;
+}
+body.dark-mode .change2 {
+  background-color:  #fff;
+  
+ 
 }
 #theme-toggle{
   /* padding-left: 2px; */
@@ -22,6 +47,10 @@ body.dark-mode {
   height: 29px;
 
 }
+.light-dark {
+  margin-left: 5px;
+}
+
 #moon-icon {
   display: none;
 }
@@ -245,15 +274,20 @@ body.dark-mode {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-  /* copoun section */
+  /* -------------- copoun section opens--------- */
   #popup-coupon {
     display: none;
     position: fixed;
     top: 20%;
-    left: 25%;
+    left: 22%;
     width: 50%;
     height: 50%;
-    background-image: linear-gradient(to right, rgb(212, 0, 255) , rgb(40, 160, 208));
+    background-image: url("images/lastback.png");
+    background-repeat: no-repeat;
+ 
+    background-position: center;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(to right, rgb(212, 0, 255) , rgb(40, 160, 208)); */
     z-index: 9999;
   }
   
@@ -318,8 +352,8 @@ body.dark-mode {
     height: 40px;
     align-items: center;
     justify-content: flex-start;
-    /* margin-left: 7%; */
-    border-radius: 3px;
+    margin-left: 30px;
+    border-radius: 48px;
   }
   
   #searchpng {
@@ -430,6 +464,7 @@ body.dark-mode {
     padding: 70px 0;
   
     background-color: #eee;
+    
    
   }
   .footer-col {
@@ -495,7 +530,45 @@ body.dark-mode {
     height: 25%;
     margin-right: 15px;
   }
-  
+  /* weather section and geo-location*/
+.container_weather {
+    max-width: 150px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #weather {
+    font-weight: bold;
+  }
+
+  .weather-icon {
+    margin-right: 10px;
+    height: 50px;
+    /* width: 25px; */
+  }
   /*responsive*/
   @media (max-width: 767px) {
     .footer-col {
